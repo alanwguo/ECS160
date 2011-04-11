@@ -1,0 +1,224 @@
+Alan Guo
+Benjamin Liu
+Chris Sonoda
+Wai Ip
+
+=========================Place it Notes/Todos=======================
+Test Case 1:
+Goal: User leaves a person-to-person place it note.
+Initial State: User is at a particular location and wishes to leave a place it note.
+Final State: User leaves the note.
+
+1. User moves to a specific location where he/she wishes to leave a note
+2. User presses the "leave place it note" button in the application.
+3. User enters a leave note page in the application.
+4. User selects a person from the contacts list.
+5. User writes a message.
+6. User hits a Send button.
+7. User receives confirmation that the note has been sent to the contact.
+
+Test Case 2:
+Goal: User leaves a person-to-person place it todo.
+Inital State: User is at a particular location and wishes to leave a place it todo
+Final State: User leaves a place it todo
+
+1. User moves to a specific location where he/she wishes to leave a place it todo
+2. User presses the "leave place it note" button in the application.
+3. User enters a leave note page in the application.
+4. User selects a person from the contacts list.
+5. User selects a todo check box.
+6. User writes a task.
+7. User selects a deadline time.
+8. User hits a Send button.
+9. User receives confirmation that the todo has been sent to the contact.
+
+Test Case 3:
+Goal: User receives and acts upon a person-to-person Place it notes.
+Initial State: User arrives at a location with a place it note.
+Final State: User reads the note and chooses to delete or leave the note.
+
+1. User moves towards a location with a note.
+2. As the user nears the location, system leaves a notification that notes are nearby.
+3. User selects the notification which brings him into the app.
+4. The app displays a list of all the nearby notes/todos.
+5. User selects note.
+6. The app displays the details. The app marks the message as read.
+7. User reads the note.
+8. (If User wishes to delete)
+	1. User hits the delete note button.
+	2. User receives confirmatio that the note has been deleted.
+9. (Otherwise)
+	1. Place it note remains in the app and will display a notification next time user approaches the same location.
+
+Test Case 4:
+Goal: User receives and acts upon a person-to-person Place it todo.
+Initial State: User arrives at a location with a place it todo.
+Final State: User completes the todo and marks it as done, or declines the todo for this visit.
+
+1. User moves towards a location with a note.
+2. As the user nears the location, system leaves a notification that todos are nearby.
+3. User selects the notification which brings him into the app.
+4. The app displays a list of all the nearby notes/todos.
+5. User selects todo.
+6. The app displays the details. The app marks the todo as read.
+7. User reads the todo.
+8. (If User completes the todo)
+	1. User hits the accept to-do button.'
+	2. App asks for confirmation that the to-do will be completed.
+	3. User confirms.
+	4. The to-do is deleted from the system.
+	5. The creator is notified that the todo has been completed.
+9. (If User declines the todo)
+	1. User hits the decline to do.
+	2. App notifies the creator that the todo has been declined.
+	3. The to do is removed from the list until the next time the user enters the same location before the deadline.
+
+Test Case 5:
+Goal: User receives and but does not act upon a person-to-person Place it todo.
+Initial State: User arrives at a location with a place it todo.
+Final State: User leaves the area without acting upon the todo.
+
+1. User moves towards a location with a note.
+2. As the user nears the location, system leaves a notification that todos are nearby.
+3. User leaves the area.
+4. The app causes the phone to vibrate and reminds the users of the nearby todos.
+5. (If User ignores the vibration)
+	1. The todos are saved for the next time user enters the location before the deadline.
+6. (Otherwise)
+	1. User enters the app and goes through Test Case 4.
+
+Test Case 6:
+Goal: User does not act upon a place it todo before the deadline
+Initial State: User either never enters the location or continously ignores the todo
+Final State: The creator is notified that the todo has expired without being complete and the todo is removed from the system.
+
+1. The deadline for the todo has passed.
+2. The system removes the todo.
+3. The system notifies the creator that the todo has not been accomplished.
+
+Test Case 7:
+Goal: User wishes to view all the notes and todos nearby his location.
+Initial State: User is at a location and wishes to view the notes/todos.
+Final State: The User views all the todos/notes nearby his location.
+
+1. The User is at location which may or may not have notes/todos.
+2. The User enters the application and enters the "nearby notes" page.
+3. The application lists out all the todos/notes at the user's location.
+4. The User can act upon these notes/todos as stated in Test Cases 3 and 4.
+
+=========================Geotagged pictures=======================
+Test Case 8:
+Goal: User leaves a geotagged picture at a location.
+Initial State: User wishes to tag a picture with a location and leave it at a location.
+Final State: The picture is sent to the contact to be received when the contact approaches the location.
+
+1. The User is at a location where he wishes to tag a picture.
+2. The User chooses the leave picture page..
+3. The User chooses a picture from the gallery and tags it with the user's current location.
+4. The User chooses a contact.
+5. The User chooses a location to leave the picture at.
+6. The User enters a message.
+7. The User hits the "Send" button.
+8. The app confirms the picture and messsage has been sent.
+
+Test Case 9:
+Goal: User receives a picture message.
+Initial State: User is at a location where a picture message has been left.
+Final State: User views and acts upon the picture message.
+
+1. The User is at alocation where a picture has been left.
+2. The User receives a notification that a picture message is nearby.
+3. The User hits the notification which brings him into the application.
+4. The application lists out all the picture messages at the location.
+5. The User chooses a picture message.
+6. The User reads the message and views the picture.
+7. (If User wishes to delete the message)
+	1. The User hits the delete message button.
+	2. THe app confirms that the user wishes to delete the message.
+	3. The User confirms.
+	4. The picture message is removed.
+8. (Otherwise)
+	1. The picture message is left and will send a notification the next time the user enters the location.
+
+Test Case 10:
+Goal: User wishes to view all the picture messages nearby his location.
+Initial State: User is at a location and wishes to view the picture messages.
+Final State: The User views all the picture messages nearby his location.
+
+1. The User is at location which may or may not have picture messages.
+2. The User enters the application and enters the "nearby notes" page.
+3. The application lists out all the todos/notes/picture messages at the user's location.
+4. The User can act upon these picture messages as stated in Test Case 9.
+
+===================Location Sensitive service customization====================
+Test Case 11:
+Goal: The user wishes to set a customization for a particular location.
+Initial State: The user wishes to set the customization.
+Final State: The customization is set.
+
+1. The user wishes to set the customization.
+2. The user enters the application and enters the "customizations" page.
+3. The user picks a location from the map.
+4. The user picks a time pattern for customization.
+5. The user picks a time period (Start Date - End Date) for the customization.
+6. The user picks services to be disabled or enabled.
+7. The user customizes exceptions for specific services.
+8. The user chooses whether or not the customization will leave a notification when active.
+9. The user hits the "Done" button.
+10. The customization is saved onto the system.
+
+Test Case 12:
+Goal: The customization is active while the user qualifies for it.
+Initial State: The user is at a position that qualifies for a particular customization to be active.
+Final State: The customization is active.
+
+1. The user enters a location/time frame for the customization.
+2. The app leaves a notification (as specified by the user) that the customization is active.
+3. The customization becomes active.
+4. (If user leaves the location or the time frame expires)
+	1. The customization deactivates.
+
+Test Case 13:
+Goal: The exceptions for the phone call service is working.
+Initial State: A customization with a phone call exception is active.
+Final State: A phone call placed by the excepted contact goes through, but all other phones calls do not.
+
+1. The customization that disables phone services except for "contact A" is enabled.
+2. Phone calls from other contacts are placed.
+3. The user does not receive the phone calls.
+4. Phone call from "contact A" is placed.
+5. The user receives the phone call.
+
+============================Misc=============================
+Test Case 14:
+Goal: The user chooses a location (for leaving a note or picture message)
+Initial State: The user wishes to choose a location.
+Final State: The location is chosen.
+
+1. The user hits the choose location button.
+2. The app enters a screen which displays a MapView and a search bar.
+3. (If user wishes to enter an address)
+	1. The user types the address into the search bar.
+	2. The map centers and displays a pin at the location entered.
+	3. The user confirms the location and the location is chosen.
+4. (The user wishes to find the location manually)
+	1. The user drags the map until he finds the location.
+	2. The user double taps the map to drop a pin at a location.
+	3. The user confirms the location and the location is chosen.
+
+Test Case 15:
+Goal: The user chooses a time pattern
+Inital State: The user wishes to choose a time pattern.
+Final State: The time pattern is chosen.
+
+1. Te user hits the choose time pattern button.
+2. The app enters a screen which allows the user to customize a time pattern.
+3. The user picks a start time and an end time.
+4. The user checks boxes for days of the week for the time pattern.
+5. The user confirms the time pattern.
+6. The time pattern is chosen.
+
+Test Case 16:
+Goal: The user enters an invalid date for the deadline.
+Initial State: The user has enters an invalid deadline.
+Final State: The user is notifed and the note/customization cannot be saved.
